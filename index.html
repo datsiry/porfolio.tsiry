@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-sm ">
+            <span class="navbar-brand ml-5">Porfolio</span>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav mt-2">
+                    <li class="navbar-item">
+                        <router-link to="/" exact class="nav-link ">Accueil</router-link>
+                    </li>
+                    <li class="navbar-item" >
+                        <router-link to="/competences" class="nav-link " id="competences_link">Compétences</router-link>
+                    </li>
+                    <li class="navbar-item">
+                        <router-link to="/projets" class="nav-link"> Projets</router-link>
+                    </li>
+                    <li class="mon_cv">
+                        <a href="cv.pdf">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="white" viewBox="0 0 20 20">
+                            <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                        </svg>
+                        Mon CV</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <Transition name="anime" mode="out-in">
+            <router-view></router-view>
+        </Transition>
+        <script type="text/x-template" id="acceuil">
+            <div>
+        <center>
+            <div class="container " id="banier">
+                <div class="row align-items-center mt-2">
+                    <div class="col-lg-6 col-sm-12" id="text">
+                        <h3 class="text-white">Bonjour, je suis Tsiry</h3>
+                        <h1 class="titre">Développeur web fullstack
+                            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="aqua" viewBox="0 0 24 24"><path d="m7.375 16.781 1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003-4 18-1.953-.434 4-18z"/></svg>
+                        </h1>
+                        <div class="paragraphe">
+                            <p>Merci d'avoir visiter mon porfolio.
+                                Pationné par l'évolution du technologie, j'ai décidé de continuer mes études dans le domaine de l'informatique, ma specialité et le develeppement des sites et applications web 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="">
+                            <img class="" src="IMG_7007.JPG" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+            <div id="footer" class=" container">
+                <span>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" fill="white" viewBox="0 0 24 24">
+                            <path
+                                d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z" />
+                        </svg>
+                    </a>
+                </span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="white" viewBox="0 0 24 24">
+                        <path
+                            d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z" />
+                    </svg>
+                </span>
+                <span>
+                    <a href="https://ramarotianatsiry@gmail.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="40" fill="white" viewBox="0 0 20 20"><path d="M18 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z"/></svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+        </script>
+        <script type="text/x-template" id="competences">
+            <div class="container mt-4">
+                <h2 class="text-info my-4 text-center" style="letter-spacing:4px;">Mes compétences</h2>
+                <div class="skill-main ">
+                    <div class="skill-left">
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p class="text-white">Html5</p>
+                                <p class="text-white">92%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="html"></span>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p class="text-white">Css3</p>
+                                <p class="text-white">85%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="css"></span>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p class="text-white">JavaScript</p>
+                                <p class="text-white">82%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="JavaScript"></span>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p class="text-white">PHP(poo)</p>
+                                <p class="text-white">87%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="php"></span>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p class="text-white">MySql(SGBD)</p>
+                                <p class="text-white">80%</p>
+                            </div>
+                            <div class="bar">
+                                <span class="mysql"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-right">
+                        <div class="professional">
+                            <div class="box">
+                                <div class="circle" data-dots="80" data-percent="90"></div>
+                                <div class="text">
+                                    <big>90%</big>
+                                    <small>Laravel</small>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="circle" data-dots="80" data-percent="75"></div>
+                                <div class="text">
+                                    <big>75%</big>
+                                    <small>vuejs</small>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="circle" data-dots="80" data-percent="65"></div>
+                                <div class="text">
+                                    <big>65%</big>
+                                    <small>nodejs</small>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="circle" data-dots="80" data-percent="89"></div>
+                                <div class="text">
+                                    <big>88%</big>
+                                    <small>bootstrap</small>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="circle" data-dots="80" data-percent="80"></div>
+                                <div class="text">
+                                    <big>80%</big>
+                                    <small>Jquery</small>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="circle" data-dots="80" data-percent="68"></div>
+                                <div class="text">
+                                    <big>68%</big>
+                                    <small>Git</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script type="text/x-template" id="projets">
+                <slide>
+                    <slide-slide>
+                        <div class="exp_img">
+                            <img src="./connexion.png" alt="" srcset="">
+                        </div>
+                        <div class="explication">
+                            <div>
+                                <h4 class="text-info ml-4" >Explication</h4>
+                                <p>Cette application web est conçue pour gérer la demande de congé des personnels</p>
+                                <ul>
+                                    <li>voici la page de connexion, quatres types d'utilisateurs sont permis pour conneter <b> (super admin, directeur de service, chef de service et simple utilisateur)</b></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </slide-slide>
+                    <slide-slide>
+                        <div class="exp_img">
+                            <img src="./ajout_personnel.png" alt="" srcset="">
+                            <span class="prev"></span>
+                            <span class="prev"></span>
+                        </div>
+                        <div class="explication">
+                            <div>
+                                <h4 class="text-info ml-4" >Explication</h4>
+                                <p class="">Cette application web est conçue pour gérer la demande de congé des personnels</p>
+                                <ul>
+                                    <li>l'interface du super admin</li>
+                                    <li>il a le rôle d'ajouter des nouveaux personnels, voir les informations de tous les personnels, etc</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </slide-slide>
+                    <slide-slide>
+                        <div class="exp_img">
+                            <img src="./creer_compte.png" alt="" srcset="">
+                            <span class="prev"></span>
+                            <span class="prev"></span>
+                        </div>
+                        <div class="explication">
+                            <div>
+                                <h4 class="text-info ml-4" >Explication</h4>
+                                <p>Cette application web est conçue pour gérer la demande de congé des personnels</p>
+                                <ul>
+                                    <li>création compte (accessible seulement pour le super admin )</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </slide-slide>
+                    <slide-slide>
+                        <div class="exp_img">
+                            <img src="./liste_employee.png" alt="" srcset="">
+                            <span class="prev"></span>
+                            <span class="prev"></span>
+                        </div>
+                        <div class="explication">
+                            <div>
+                                <h4 class="text-info ml-4" >Explication</h4>
+                                <p>Cette application web est conçue pour gérer la demande de congé des personnels</p>
+                                <ul>
+                                    <li>modification ou suppression des employées (accessible seulement pour le super admin )</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </slide-slide>
+                    <slide-slide>
+                        <div class="exp_img">
+                            <img src="./validation_direction.png" alt="" srcset="">
+                            <span class="prev"></span>
+                            <span class="prev"></span>
+                        </div>
+                        <div class="explication">
+                            <div>
+                                <h4 class="text-info ml-4" >Explication</h4>
+                                <p>Cette application web est conçue pour gérer la demande de congé des personnels</p>
+                                <ul>
+                                    <li>l'interface du Directeur</li>
+                                    <li>il a le rôle de valider ou reffuser les demandes de congé du chef de service dans lequel il occupe </li>
+                                    <li>voir la listes des congés du chef de service, les simple employé ou ses congés</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </slide-slide>
+                    <slide-slide>
+                        <div class="exp_img">
+                            <img src="./validation_chef_service.png" alt="" srcset="">
+                            <span class="prev"></span>
+                            <span class="prev"></span>
+                        </div>
+                        <div class="explication">
+                            <div>
+                                <h4 class="text-info ml-4" >Explication</h4>
+                                <p>Cette application web est conçue pour gérer la demande de congé des personnels</p>
+                                <ul>
+                                    <li>l'interface du chef de service</li>
+                                    <li>il a le rôle de valider ou reffuser les demandes de congé des simple employées dans lequel il occupe </li>
+                                    <li>voir la listes des congés des simple employé ou ses congés</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </slide-slide>
+                    <slide-slide>
+                        <div class="exp_img">
+                            <img src="./simple_employee.png" alt="" srcset="">
+                            <span class="prev"></span>
+                            <span class="prev"></span>
+                        </div>
+                        <div class="explication">
+                            <div>
+                                <h4 class="text-info ml-4" >Explication</h4>
+                                <p>Cette application web est conçue pour gérer la demande de congé des personnels</p>
+                                <ul>
+                                    <li>l'interface pour une simple employée</li>
+                                    <li>les employées sont permis pour faire une demande et de voir leur congé</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </slide-slide>
+                </slide>
+        </script>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
+    <script src="https://unpkg.com/vue-router@3/dist/vue-router.js"></script>
+    <script src="vuevue.js"></script>
+</body>
+
+</html>
