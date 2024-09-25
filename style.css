@@ -114,7 +114,6 @@ h1.titre {
     left: 0;
     background-color: aqua;
     border-radius: 25px;
-    box-shadow: -1px 2px 19px 0px aquamarine;
 }
 
 .skill-bar .bar .html {
@@ -249,7 +248,6 @@ h1.titre {
     }
     100% {
         background: rgb(7, 169, 218);
-        box-shadow: -1px 2px 19px 0px aqua;
     }
 }
 
