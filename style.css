@@ -207,11 +207,11 @@ h1.titre {
     text-align: center;
 }
 
-.box .text big {
+.box .text small {
     letter-spacing: 1px;
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -233,7 +233,7 @@ h1.titre {
     background-color: rgb(255, 255, 255);
     position: absolute;
     border-radius: 3px;
-    transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
+    transform: rotate(calc(var(--i)*var(--rot))) translateY(-50px);
 }
 
 .points.marked {
