@@ -326,7 +326,6 @@ h1.titre {
 
 .projets_next-enter-active {
     animation: projet_next 1s;
-    position: absolute;
     top: 0;
 }
 
