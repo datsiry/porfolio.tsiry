@@ -11,33 +11,34 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <router-link to="/" exact class="nav-link ">Accueil</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/competences" class="nav-link " id="competences_link">Compétences</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/projets" class="nav-link"> Projets</router-link>
-        </li>
-         <li class="mon_cv">
-            <a href="cv.pdf">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="white" viewBox="0 0 20 20">
-                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-            </svg>
-        Mon CV</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <router-link to="/" exact class="nav-link ">Accueil</router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link to="/competences" class="nav-link " id="competences_link">Compétences</router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link to="/projets" class="nav-link"> Projets</router-link>
+                </li>
+                 <li class="mon_cv">
+                    <a href="cv.pdf">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="white" viewBox="0 0 20 20">
+                        <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                    </svg>
+                Mon CV</a>
+                </li>
+              </ul>
+                </div>
+              </div>
+            </nav>
         <Transition name="anime" mode="out-in">
             <router-view></router-view>
         </Transition>
